@@ -1,0 +1,76 @@
+#content{
+
+}
+
+#nav-button{
+    font-size: 80px;
+    border: none;
+    background-color: transparent;
+    color: var(--orange);
+    float:left;
+}
+
+
+#nav-button-container{
+    align-self: end;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+/*Nav Animation */
+#nav-button{
+    animation: animated-nav-button 1s infinite;
+}
+@keyframes animated-nav-button{
+    from{
+        padding-right: 10px;
+    }
+    to{
+        padding-right: 0;
+    }
+}
+
+
+/*=============Typed Header===============*/
+#hello {
+    height: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 60px;
+    color: var(--grey);
+    position: relative;
+    margin: 60px;
+}
+
+#border {
+    border-bottom: solid 5px var(--cyan);
+    position: absolute;
+    right: -7px;
+    width: 36px;
+}
+
+
+/* Typed Header Animation */
+#hello {
+    animation: animated-text 1s steps(7,end) 1s 1 normal both
+}
+
+#border {
+    animation: animated-cursor 600ms steps(7,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 252px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+    from{border-bottom-color: var(--cyan);}
+    to{border-bottom-color: transparent;}
+}

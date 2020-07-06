@@ -1,0 +1,30 @@
+/*=============Nav===============*/
+
+#nav{
+    list-style: none;
+    color: var(--white);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+}
+#nav li{
+    border-top-left-radius: 10% 80%;
+    border-bottom-left-radius: 10% 80%;
+}
+#nav li::before{
+    color: var(--orange);
+    content: "> ";
+}
+
+#nav li:hover{
+    background-color: var(--orange);
+}
+
+#a {margin-left: 0;}
+#b {margin-left: 15%;}
+#c {margin-left: 20%;}
+#d {margin-left: 15%;}
+#e {margin-left: 0;}
+

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+:root {
+    --white: #fffcf5;
+    --grey: #3D3D3D;
+    --cyan: #00CFA9;
+    --orange: #FC8345;
+}
+
+
+html, body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--grey);
+    font-family: 'Source Code Pro', monospace;
+}
+
+.full-height {
+    height: 100%;
+}
+
+/*=============Curved Background===============*/
+#front{
+    float: left;
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 0;
+    border-top-right-radius: 10% 50%;
+    border-bottom-right-radius: 10% 50%;
+    border-bottom-left-radius: 0;
+}
+
+#back{
+    float: right;
+    width: 0%;
+}
+
+.front-slide-out{
+    animation: front-slide-out-ani 1s forwards;
+}
+
+.back-slide-out{
+    animation: back-slide-out-ani 1s forwards;
+}
+
+/*Curved Background Animation */
+@keyframes front-slide-out-ani{
+    from{width: 100%;}
+    to{width: 75%;}
+}
+
+@keyframes back-slide-out-ani{
+    from{width: 0%;}
+    to{width: 25%;}
+}
+
+.front-slide-in{
+    animation: front-slide-in-ani 1s forwards;
+}
+
+.back-slide-in{
+    animation: back-slide-in-ani 1s forwards;
+}
+
+
+/*Curved Background Animation */
+@keyframes front-slide-in-ani{
+    from{width: 75%;}
+    to{width: 100%;}
+}
+
+@keyframes back-slide-in-ani{
+    from{width: 25%;}
+    to{width: 0%;}
+}
